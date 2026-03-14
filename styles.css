@@ -62,6 +62,10 @@ body {
 }
 /* Сообщения */
 .messages {
+    display: flex;
+    flex:1;
+    flex-direction: column;
+    gap: 10px;
     overflow-y: auto;
     background: #eaeaea;
     padding: 10px;
@@ -70,11 +74,18 @@ body {
 
 /* Отдельное сообщение */
 .message {
+    display: flex;
+    align-self: flex-start;
     background: #cce5ff;
     padding: 5px;
     border-radius: 5px;
+    flex-direction: column;
+    gap: 8px;
 }
-
+.message--foreign{
+    align-self: flex-end;
+    background: #cce5ff;
+}
 /* Поле ввода */
 .message-input {
     width: 100%;
@@ -83,6 +94,7 @@ body {
 
 /* Футер */
 .footer {
+    grid-area: footer;
     background: #ddd;
     padding: 10px;
     text-align: center;
